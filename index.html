@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <button class="navbar-toggler mt-2 navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav container-fluid justify-content-between p-0 pt-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About game</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sponsors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container-fluid">
+            <div class="container p-0">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item  active">
+                            <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img.jpg")'>
+                            </div>
+                            <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                                <div>
+                                    <h2>Longer text here and here</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img2.jpg")'>
+                            </div>
+                            <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                                <div>
+                                    <h2>Another text here and here</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
+                                </div>                          
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img3.jpg")'>
+                                </div>
+                                <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                                    <div>
+                                        <h2>Another text here and here</h2>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
+                                    </div>                          
+                                </div>
+                            </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <div class="carousel-control-container d-flex justify-content-center  align-items-center">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <div class="carousel-control-container d-flex justify-content-center  align-items-center">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration">
+        <div class="container-fluid">
+            <div class="container p-0 d-flex justify-content-center">
+                <div class="container-small">
+                    <h1 class="text-center">Registration</h1>
+                    <form class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <input type="text" class="form-control"  name="name" placeholder="Name" pattern="[A-Za-z]{1,30}" required>
+                            <div class="invalid-tooltip">Invalid name!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="surname" placeholder="Surname" pattern="[A-Za-z]{1,30}" required>
+                            <div class="invalid-tooltip">Invalid surname!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone" pattern="\d{9}$|[+]\d{11}$" required>
+                            <div class="invalid-tooltip">Invalid phone!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="address" placeholder="Address" required>
+                            <div class="invalid-tooltip">Invalid address!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                            <div class="invalid-tooltip">Invalid email!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="city" placeholder="City" pattern="[A-Za-z]{1,30}" required>
+                            <div class="invalid-tooltip">Invalid city!</div>
+                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="valid-icon icon-check-alt"></i>
+                        </div>
+
+                        <div class="terms accordion" id="accordion">
+                            <nav class="nav d-flex justify-content-between">
+                                <div class="active terms-container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <a class="nav-link">Terms and conditions <i class="terms-icon icon-plus"></i></a>
+                                </div>
+                                <div class="terms-container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <a class="nav-link">Rules <i class="terms-icon icon-plus"></i></a>     
+                                </div>
+                                <div class="terms-container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                    <a  class="nav-link">FAQ <i class="terms-icon icon-plus"></i></a>  
+                                </div>   
+                            </nav>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                            </div>  
+                        </div>
+
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="exampleCheck1"  required>
+                            <label class="custom-control-label" for="exampleCheck1">                                 
+                                I AGREE with the terms and conditions. I have read them thoroughly and 
+                                agree to abide by them. <a href="">Terms of service</a>
+                            </label>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn">REGISTER</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html>
