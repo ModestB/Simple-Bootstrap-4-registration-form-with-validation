@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <div class="container p-0">
                 <nav class="navbar navbar-expand-lg p-0">
-                    <button class="navbar-toggler mt-2 navbar-light bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler mt-2 navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     
@@ -46,17 +46,17 @@
     <section class="hero">
         <div class="container-fluid">
             <div class="container p-0">
-                <div id="carouselExampleIndicators" class="carousel slide">
+                <div id="carouselIndicators" class="carousel slide">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item  active">
                             <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img.jpg")'>
                             </div>
-                            <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                            <div class="carousel-caption text-lg-left h-100 d-flex align-items-center">
                                 <div>
                                     <h2>Longer text here and here</h2>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
@@ -66,7 +66,7 @@
                         <div class="carousel-item">
                             <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img2.jpg")'>
                             </div>
-                            <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                            <div class="carousel-caption text-lg-left h-100 d-flex align-items-center">
                                 <div>
                                     <h2>Another text here and here</h2>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
@@ -76,7 +76,7 @@
                         <div class="carousel-item">
                                 <div class="image-opacity d-block w-100 h-100" style='background-image: url("assets/img/hero_img3.jpg")'>
                                 </div>
-                                <div class="carousel-caption text-md-left h-100 d-flex align-items-center">
+                                <div class="carousel-caption text-lg-left h-100 d-flex align-items-center">
                                     <div>
                                         <h2>Another text here and here</h2>
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quas, eaque beatae odio rem eius in est sint voluptas minima repudiandae commodi, consectetur inventore voluptatem suscipit aliquid quo maiores officiis?</p>
@@ -84,12 +84,12 @@
                                 </div>
                             </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
                         <div class="carousel-control-container d-flex justify-content-center  align-items-center">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         </div>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
                         <div class="carousel-control-container d-flex justify-content-center  align-items-center">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         </div>
@@ -108,13 +108,13 @@
                         <div class="form-group">
                             <input type="text" class="form-control"  name="name" placeholder="Name" pattern="[A-Za-z]{1,30}" required>
                             <div class="invalid-tooltip">Invalid name!</div>
-                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="invalid-icon icon-x-altx-alt"></i>
                             <i class="valid-icon icon-check-alt"></i>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="surname" placeholder="Surname" pattern="[A-Za-z]{1,30}" required>
                             <div class="invalid-tooltip">Invalid surname!</div>
-                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="invalid-icon icon-x-altx-alt"></i>
                             <i class="valid-icon icon-check-alt"></i>
                         </div>
                         <div class="form-group">
@@ -126,34 +126,36 @@
                         <div class="form-group">
                             <input type="text" class="form-control" name="address" placeholder="Address" required>
                             <div class="invalid-tooltip">Invalid address!</div>
-                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="invalid-icon icon-x-altx-alt"></i>
                             <i class="valid-icon icon-check-alt"></i>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Email" required>
                             <div class="invalid-tooltip">Invalid email!</div>
-                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="invalid-icon icon-x-altx-alt"></i>
                             <i class="valid-icon icon-check-alt"></i>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="city" placeholder="City" pattern="[A-Za-z]{1,30}" required>
                             <div class="invalid-tooltip">Invalid city!</div>
-                            <i class=" invalid-icon icon-x-altx-alt"></i>
+                            <i class="invalid-icon icon-x-altx-alt"></i>
                             <i class="valid-icon icon-check-alt"></i>
                         </div>
 
                         <div class="terms accordion" id="accordion">
-                            <nav class="nav d-flex justify-content-between">
-                                <div class="active terms-container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <a class="nav-link">Terms and conditions <i class="terms-icon icon-plus"></i></a>
+                            <div class="d-flex justify-content-between">
+                                <div class="active terms-container" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
+                                    Terms and conditions <i class="terms-icon icon-plus"></i>
                                 </div>
-                                <div class="terms-container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <a class="nav-link">Rules <i class="terms-icon icon-plus"></i></a>     
+
+                                <div class="terms-container" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
+                                    Rules <i class="terms-icon icon-plus"></i>  
                                 </div>
-                                <div class="terms-container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
-                                    <a  class="nav-link">FAQ <i class="terms-icon icon-plus"></i></a>  
+
+                                <div class="terms-container" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
+                                    FAQ <i class="terms-icon icon-plus"></i>
                                 </div>   
-                            </nav>
+                            </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             </div>
@@ -167,8 +169,8 @@
 
 
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="exampleCheck1"  required>
-                            <label class="custom-control-label" for="exampleCheck1">                                 
+                            <input type="checkbox" class="custom-control-input" id="formCheck"  required>
+                            <label class="custom-control-label" for="formCheck">                              
                                 I AGREE with the terms and conditions. I have read them thoroughly and 
                                 agree to abide by them. <a href="">Terms of service</a>
                             </label>
@@ -182,9 +184,6 @@
             </div>
         </div>
     </section>
-    
-
-
     
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

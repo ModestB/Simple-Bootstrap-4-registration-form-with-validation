@@ -1,18 +1,3 @@
-//'use strict';
-
-let registrationNav = Array.from(document.querySelectorAll(".terms nav div"));
-
-registrationNav.forEach((element, index) => {
-    element.addEventListener('click', (e) => {
-        registrationNav.forEach((ele) => {
-            ele.classList.remove('active');
-        })
-        e.currentTarget.classList.add("active");
-        changeIcon();
-        showFix(index)
-    })
-})
-
 function showFix(index){
     let terms = Array.from(document.querySelectorAll(".terms > .collapse"));
     if(terms[index].classList.contains('show')){
@@ -20,11 +5,9 @@ function showFix(index){
     }  
 }
 
-
-
 function changeIcon(){
-    let iconEleActive = document.querySelector(".terms-container.active a > i");
-    let iconEleInactive = document.querySelectorAll(".terms-container a > i");
+    let iconEleActive = document.querySelector(".terms-container.active > i");
+    let iconEleInactive = document.querySelectorAll(".terms-container > i");
 
     iconEleInactive.forEach((icon) =>{
         icon.classList.remove("icon-minus")
@@ -33,6 +16,23 @@ function changeIcon(){
     iconEleActive.classList.remove("icon-plus");
     iconEleActive.classList.add("icon-minus")   
 }
+
+(function () {
+    window.addEventListener('load', function() {
+        let registrationNav = Array.from(document.querySelectorAll(".terms .terms-container"));
+
+        registrationNav.forEach((element, index) => {
+            element.addEventListener('click', (e) => {
+                registrationNav.forEach((ele) => {
+                    ele.classList.remove('active');
+                })
+                e.currentTarget.classList.add("active");
+                changeIcon();
+                showFix(index)
+            })
+        })
+    })
+})();
 
 // BOOTSTRAP 4 form validation
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -53,3 +53,4 @@ function changeIcon(){
     }, false);
   })();
 
+  changeIcon();

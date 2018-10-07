@@ -1,8 +1,16 @@
 @import '_icomoon';
 
+body{
+    color: #5b5a5a;
+}
+
 .container{
     max-width: 930px;
 }
+
+/* ========================================================================== */
+/* NAVBAR */
+/* ========================================================================== */
 nav {
     a{
         color: #5b5a5a;
@@ -17,7 +25,10 @@ nav {
         }       
     }  
 }
+
 .navbar-nav{
+    margin-left: 10%;
+    margin-right: 10%;
     .nav-item{
         .nav-link{
             padding-left: 0;
@@ -26,12 +37,14 @@ nav {
     }
 }
 
-
-
 .navbar-toggler{
     margin-bottom: 10px;
 }
 
+
+/* ========================================================================== */
+/* CAROUSEL */
+/* ========================================================================== */
 .carousel-item{
     height: 400px;
     max-width: 930px;
@@ -52,9 +65,18 @@ nav {
 .carousel-control-prev{
     width: 10%;
 }
-.navbar-nav{
-    margin-left: 10%;
-    margin-right: 10%;
+
+
+.carousel-control-container{
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .carousel-caption{
@@ -77,20 +99,6 @@ nav {
     }
 }
 
-
-.carousel-control-container{
-    background-color: #b2b2b2;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon{
-        width: 10px;
-        height: 10px;
-    }
-}
-
-
 /* ========================================================================== */
 /* REGISTRATION */
 /* ========================================================================== */
@@ -99,7 +107,6 @@ nav {
     .container{
         background-color: #f2f3f5;
     }
-
     .container-small{
         max-width: 370px;
         width: 100%;
@@ -110,47 +117,6 @@ nav {
         color: #5b5a5a;
         padding: 30px 0;
     }
-    nav{
-        max-width: 370px;
-        width: 100%;
-        div:first-child{
-            width: 132px;
-        }
-        div{
-            width: (370px - 132px)/2;
-        }
-        a{
-            text-align: center;
-            padding: 10px 0;
-            width: auto;
-            border-bottom: 2px solid #b2b2b2;
-        }
-        a:hover{
-            color: #5335eb !important;
-            border-bottom: 2px solid #5335eb;
-        }
-        .active{
-            a{
-                color: #5335eb;
-                border-bottom: 2px solid #5335eb;
-            }       
-        }  
-    }
-
-    .terms{
-        //margin-bottom: 60px;
-        p{
-            margin-bottom: 60px;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        .terms-container{
-            cursor: pointer;
-        }
-    }
-}
-.terms-icon{
-    display:none;
 }
 
 .form-group{
@@ -159,7 +125,7 @@ nav {
 }
 
 .form-control{
-    height: 40px;
+    height: 45px;
     padding-left: 20px;
     padding-right: 45px;
     font-size: 14px;
@@ -169,7 +135,9 @@ nav {
     border: 1px solid #99ccff;
     box-shadow: none;
 }
+
 .custom-control-label{
+    font-size: 11px;
     a{
         color: #5335eb;
         text-decoration: underline;
@@ -187,10 +155,10 @@ nav {
 }
 .custom-control-label::before, 
 .custom-control-label::after {
-    top: 2px;
+    top: 25%;
     left: -2rem;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
@@ -207,61 +175,14 @@ nav {
 
 }
 
-form .btn{
-    margin-top: 40px;
-    margin-bottom: 70px;
-    width: 170px;
-    background-color: #5335eb;
-    color: #fff;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-form .btn:hover{
-    background-color: #755def;
-}
-
-
-
-.collapsing {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    -webkit-transition-property: visibility;
-    transition-property:  visibility;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-}
-.custom-select.is-valid:focus,
-.form-control.is-valid:focus,
-.was-validated .custom-select:valid:focus,
-.was-validated .form-control:valid:focus,    
-.custom-select.is-invalid:focus,
-.form-control.is-invalid:focus, 
-.was-validated .custom-select:invalid:focus,
-.was-validated .form-control:invalid:focus{
-    box-shadow: none;
-}
-
-
-.custom-select.is-invalid:focus,
-.form-control.is-invalid:focus,
-.was-validated .custom-select:invalid:focus,
-.was-validated .form-control:invalid:focus{
-    border: 1px solid #ba122b;
-}
-
-
 .invalid-tooltip{
-    height: 20px;
+    height: 19px;
     margin-top: 0;
     padding: 5px;
     font-size: 11px;
-    line-height: 1;
-    top: 25%;
+    line-height: 0.9;
+    top: 29%;
     left: 98%;
-    //overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     background-color: #ba122b;
@@ -277,52 +198,48 @@ form .btn:hover{
     height: 0;
     left: -5%;
     top: 25%;
-   
-    //margin-top: -20px;
 }
 
 .invalid-icon,
 .valid-icon{
     display: none;
     position: absolute;
-    top: 25%;
+    top: 29%;
     right: 5%;
 }
 
-.custom-select.is-invalid~.invalid-icon,
-.form-control.is-invalid~.invalid-icon, 
-.was-validated .custom-select:invalid~.invalid-icon,
-.was-validated .form-control:invalid~.invalid-icon{
-    display:block;
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,    
+.form-control.is-invalid:focus, 
+.was-validated .form-control:invalid:focus{
+    box-shadow: none;
 }
-.custom-select.is-valid~.valid-icon,
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus{
+    border: 1px solid #ba122b;
+}
+
+.form-control.is-invalid~.invalid-icon, 
+.was-validated .form-control:invalid~.invalid-icon,
 .form-control.is-valid~.valid-icon, 
-.was-validated .custom-select:valid~.valid-icon,
 .was-validated .form-control:valid~.valid-icon{
     display:block;
 }
-.custom-select.is-invalid:focus,
+
 .form-control.is-invalid:focus,
-.was-validated .custom-select:invalid:focus,
 .was-validated .form-control:invalid:focus,
-.custom-select.is-invalid,
 .form-control.is-invalid,
-.was-validated .custom-select:invalid,
 .was-validated .form-control:invalid{
     border: 1px solid #ba122b;
     color: #ba122b;
 }
 
-.custom-select.is-valid:focus,
 .form-control.is-valid:focus,
-.was-validated .custom-select:valid:focus,
 .was-validated .form-control:valid:focus,
-.custom-select.is-valid,
 .form-control.is-valid,
-.was-validated .custom-select:valid,
 .was-validated .form-control:valid{
     border: 1px solid #66cc66;
-    //color: #66cc66;
 }
 
 .custom-control-input.is-valid~.custom-control-label,
@@ -335,91 +252,113 @@ form .btn:hover{
     background-color: #fff;
 }
 
+.terms{
+    .terms-container:first-child{
+        width: 132px;
+    }
+    .terms-container{
+        cursor: pointer;
+        text-align: center;
+        padding: 10px 0;
+        width: (370px - 132px)/2;
+        border-bottom: 2px solid #b2b2b2;
+    }
+    .terms-container:hover{
+        color: #5335eb;
+        border-bottom: 2px solid #5335eb;
+    }  
+    .active{
+        color: #5335eb;
+        border-bottom: 2px solid #5335eb;
+    } 
+    p{
+        margin-bottom: 60px;
+        margin-top: 20px;
+        font-size: 11px;
+    }
+}
 
-// .custom-control-input.is-valid:checked~.custom-control-label::before:focus,{
-//     box-shadow: none;
-// }
+.terms-icon{
+    display:none;
+}
 
-// .custom-control-input.is-valid~.custom-control-label::before,
-// .was-validated .custom-control-input:valid~.custom-control-label::before{
-//     background-color: #fff;
-// }
+.collapsing {
+    //position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-property: visibility;
+    transition-property:  visibility;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
 
-// .custom-control-input.is-valid~.custom-control-label::before,
-//  .was-validated .custom-control-input:valid~.custom-control-label::before {
-//     background-color: #fff;
-// }
-
-// .custom-control-input.is-valid:checked~.custom-control-label::before,
-//  .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
-//     background-color: #fff;
-// }
-
-// .custom-control-input.is-valid:checked~.custom-control-label::before,
-//  .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
-//     background-color: #fff;
-// }
+form {
+    .btn{
+        margin-top: 40px;
+        margin-bottom: 70px;
+        width: 170px;
+        background-color: #5335eb;
+        color: #fff;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .btn:hover{
+        background-color: #755def;
+    }
+}
 
 
 @media only screen and (max-width: 992px) {
     .navbar-nav{
         margin: 0;
+        .nav-link{
+            margin-left: 10px;
+        }
     }
     .navbar-toggler{
+        border: 1px solid #b2b2b2;
         margin-left: 10px;
     }
     .container-fluid{
         padding: 0;
     }
-
     .carousel-caption{
         width: 80%;
     }
 } 
 
-@media only screen and (max-width: 768px) {
-    .carousel-caption{
-        text-align: center;
-    }
-}
 @media only screen and (max-width: 576px) {
-    .registration nav div:first-child{
-        width: 100%;
+    .custom-control{
+        margin-left: 10px;
     }
-    .registration nav a {
-        text-align: left;
-        padding-left: 10px;
-        background-color: #fff;
-        border-bottom: 2px solid #f2f3f5;
+
+    .form-control.is-invalid~.invalid-tooltip,
+    .was-validated .form-control:invalid~.invalid-tooltip{
+        display: none;
     }
-    .registration nav a:hover {
-        border-bottom: 2px solid #f2f3f5;
-    }
-    .registration nav .active a{
-        background-color: #5335eb;
-        border: none;
-        color: #fff !important;
-    }
-    .terms nav{
-        flex-direction: column;
-        .terms-container{
-            width: 100%;
-        }
-    }
-    .registration {
-        .terms{
-            p{
-                background-color: #fff;
-                padding: 10px;
-                margin-top: 0;
-            }
-        }
-    }
+
     .terms-icon{
         display: block;
     }
-    .terms-container{
-        a{
+
+    .terms{
+        .terms-container{
+            text-align: left;
+            padding-left: 10px;
+            background-color: #fff;
+            border-bottom: 2px solid #f2f3f5;
+        }
+        .terms-container:hover {
+            border-bottom: 2px solid #f2f3f5;
+            color: #5b5a5a;
+        }
+        .terms-container.active {
+            background-color: #5335eb;
+            border: none;
+            color: #fff;
+        }
+        .terms-container{
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -427,16 +366,20 @@ form .btn:hover{
                 margin-right: 10px;
             }
         }
-    }
-    .custom-control{
-        margin-left: 10px;
+        p{
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 0;
+        }
     }
 
-
-    .custom-select.is-invalid~.invalid-tooltip,
-    .form-control.is-invalid~.invalid-tooltip,
-    .was-validated .custom-select:invalid~.invalid-tooltip,
-    .was-validated .form-control:invalid~.invalid-tooltip{
-        display: none;
+    .terms > div{
+        flex-direction: column;
+        .terms-container:first-child{
+            width: 100%;
+        }
+        .terms-container{
+            width: 100%;
+        }
     }
 } 
