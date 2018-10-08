@@ -1,37 +1,49 @@
-function showFix(index){
-    let terms = Array.from(document.querySelectorAll(".terms > .collapse"));
-    if(terms[index].classList.contains('show')){
-        terms[index].classList.remove('show')
-    }  
-}
-
 function changeIcon(){
-    let iconEleActive = document.querySelector(".terms-container.active > i");
-    let iconEleInactive = document.querySelectorAll(".terms-container > i");
+    const activeIcon = document.querySelector(".terms-container.active > i");
+    const inactiveIcons = document.querySelectorAll(".terms-container > i");
+    inactiveIcons.forEach((icon) =>{
+        icon.classList.remove("icon-minus");
+        icon.classList.add("icon-plus");
+    });
+    activeIcon.classList.remove("icon-plus");
+    activeIcon.classList.add("icon-minus") ;  
+};
 
-    iconEleInactive.forEach((icon) =>{
-        icon.classList.remove("icon-minus")
-        icon.classList.add("icon-plus")
-    })
-    iconEleActive.classList.remove("icon-plus");
-    iconEleActive.classList.add("icon-minus")   
-}
+function collapseAllTerms(){
+    const terms = document.querySelectorAll(".terms .collapse");
+    terms.forEach((term) =>{
+        term.classList.remove('show');
+    });
+};
+
+function showCorrectTerm(id){
+    const term = document.getElementById(id);
+    term.classList.add('show');
+};
+
+function removeActiveFromTermNav(termNav){
+    termNav.forEach((ele) => {
+        ele.classList.remove('active');
+    });
+};
+
+function showActiveTermNav(navEle){
+    navEle.classList.add("active");
+};
 
 (function () {
     window.addEventListener('load', function() {
-        let registrationNav = Array.from(document.querySelectorAll(".terms .terms-container"));
-
+        const registrationNav = Array.from(document.querySelectorAll(".terms .terms-container"));
         registrationNav.forEach((element, index) => {
             element.addEventListener('click', (e) => {
-                registrationNav.forEach((ele) => {
-                    ele.classList.remove('active');
-                })
-                e.currentTarget.classList.add("active");
-                changeIcon();
-                showFix(index)
-            })
-        })
-    })
+                collapseAllTerms();
+                showCorrectTerm(e.target.getAttribute("aria-controls"));
+                removeActiveFromTermNav(registrationNav);
+                showActiveTermNav(e.currentTarget);
+                changeIcon();                 
+            });
+        });
+    });
 })();
 
 // BOOTSTRAP 4 form validation
@@ -46,11 +58,18 @@ function changeIcon(){
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-          }
+          };
           form.classList.add('was-validated');
         }, false);
       });
     }, false);
   })();
 
-  changeIcon();
+
+(function() {
+    window.addEventListener('scroll', () => {
+        $('.navbar-collapse.collapse').collapse('hide');    
+    });
+}())
+
+changeIcon();

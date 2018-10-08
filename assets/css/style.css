@@ -172,11 +172,7 @@ nav .active a {
   background-color: #fff; }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='#5335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
-
-@-moz-document url-prefix() {
-  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='%235335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); } }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='%235335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
 
 .invalid-tooltip {
   height: 19px;
@@ -265,23 +261,16 @@ nav .active a {
   color: #5335eb;
   border-bottom: 2px solid #5335eb; }
 
-.terms p {
-  margin-bottom: 60px;
+.terms .collapse {
   margin-top: 20px;
+  margin-bottom: 60px;
+  height: 150px; }
+
+.terms p {
   font-size: 11px; }
 
 .terms-icon {
   display: none; }
-
-.collapsing {
-  height: 0;
-  overflow: hidden;
-  -webkit-transition-property: visibility;
-  -o-transition-property: visibility;
-  transition-property: visibility;
-  -webkit-transition-duration: 0s;
-  -o-transition-duration: 0s;
-  transition-duration: 0s; }
 
 form .btn {
   margin-top: 40px;
@@ -341,10 +330,34 @@ form .btn:hover {
     align-items: center; }
     .terms .terms-container i {
       margin-right: 10px; }
-  .terms p {
+  .terms .collapse {
+    margin-top: 0;
+    height: 220px; }
+  .terms .collapse:not(.show) p {
+    height: 0; }
+  @-webkit-keyframes slide {
+    from {
+      height: 0; }
+    to {
+      height: 220px; } }
+  @keyframes slide {
+    from {
+      height: 0; }
+    to {
+      height: 220px; } }
+  .terms .collapse.show p {
+    height: 220px;
+    overflow: hidden;
+    -webkit-animation-name: slide;
+    animation-name: slide;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-direction: backwards;
+    animation-direction: backwards;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
     background-color: #fff;
-    padding: 10px;
-    margin-top: 0; }
+    padding: 10px; }
   .terms > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -353,4 +366,9 @@ form .btn:hover {
     .terms > div .terms-container:first-child {
       width: 100%; }
     .terms > div .terms-container {
-      width: 100%; } }
+      width: 100%; }
+  .custom-control {
+    margin-left: 0; }
+  .custom-control-label::before,
+  .custom-control-label::after {
+    left: -1.5rem; } }

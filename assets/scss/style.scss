@@ -41,7 +41,6 @@ nav {
     margin-bottom: 10px;
 }
 
-
 /* ========================================================================== */
 /* CAROUSEL */
 /* ========================================================================== */
@@ -65,7 +64,6 @@ nav {
 .carousel-control-prev{
     width: 10%;
 }
-
 
 .carousel-control-container{
     background-color: #b2b2b2;
@@ -166,13 +164,7 @@ nav {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after{
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='#5335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
-}
-@-moz-document url-prefix() {
-    .custom-checkbox .custom-control-input:checked~.custom-control-label::after{
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='%235335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
-    }
-
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 0 6 8'%3E%3Cpath fill='%235335eb' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .invalid-tooltip{
@@ -271,25 +263,18 @@ nav {
         color: #5335eb;
         border-bottom: 2px solid #5335eb;
     } 
-    p{
-        margin-bottom: 60px;
+    .collapse{
         margin-top: 20px;
+        margin-bottom: 60px;
+        height: 150px;   
+    } 
+    p{
         font-size: 11px;
-    }
+    }  
 }
 
 .terms-icon{
     display:none;
-}
-
-.collapsing {
-    //position: relative;
-    height: 0;
-    overflow: hidden;
-    -webkit-transition-property: visibility;
-    transition-property:  visibility;
-    -webkit-transition-duration: 0s;
-    transition-duration: 0s;
 }
 
 form {
@@ -307,7 +292,6 @@ form {
         background-color: #755def;
     }
 }
-
 
 @media only screen and (max-width: 992px) {
     .navbar-nav{
@@ -366,10 +350,30 @@ form {
                 margin-right: 10px;
             }
         }
-        p{
-            background-color: #fff;
-            padding: 10px;
+        .collapse{
             margin-top: 0;
+            height: 220px;   
+        }
+        .collapse:not(.show){
+            p{
+                height: 0;
+            }  
+        }   
+        @keyframes slide {
+            from {height: 0;}
+            to {height: 220px;}
+        }
+        .collapse.show{
+            p{
+                height: 220px;
+                overflow: hidden;
+                animation-name: slide;
+                animation-duration: 0.5s;
+                animation-direction:backwards;
+                animation-timing-function: ease;
+                background-color: #fff;
+                padding: 10px;     
+            }  
         }
     }
 
@@ -381,5 +385,14 @@ form {
         .terms-container{
             width: 100%;
         }
+    }
+
+    .custom-control {
+        margin-left: 0;
+    }
+
+    .custom-control-label::before,
+    .custom-control-label::after {
+        left: -1.5rem;
     }
 } 
